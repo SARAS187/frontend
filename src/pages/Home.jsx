@@ -310,11 +310,23 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Logo with glow effect */}
-          <div className="flex items-center justify-center mb-5 relative">
+          {/* <div className="flex items-center justify-center mb-5 relative">
             <div className="absolute w-12 h-12 bg-blue-400 rounded-full filter blur-xl opacity-30"></div>
             <Shield className="h-14 w-14 mr-3 drop-shadow-lg text-white" />
             <span className="text-xl font-semibold tracking-wide">SGSN Associates Pvt. Ltd.</span>
-          </div>
+          </div> */}
+
+          <div className="flex items-center justify-center mb-5 relative w-full px-4">
+  {/* Glow circle, now larger and responsive */}
+  <div className="absolute left-1/2 top-1/2 w-16 h-16 sm:w-12 sm:h-12 bg-blue-400 rounded-full filter blur-2xl opacity-30 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+  {/* Icon and Text */}
+  <Shield className="h-12 w-12 sm:h-14 sm:w-14 mr-2 sm:mr-3 drop-shadow-lg text-white" />
+  <span className="text-lg sm:text-xl font-semibold tracking-wide text-center">
+    SGSN Associates Pvt. Ltd.
+  </span>
+</div>
+
 
           {/* Headline with enhanced typography */}
           <div className="mb-8 relative">
@@ -656,24 +668,30 @@ export default function Home() {
                   <h3 className="text-2xl font-bold">Career Advancement: Expert Certifications</h3>
                 </div>
 
-                <div className="ml-12 bg-gradient-to-r from-[#f7f9fc] to-white border border-[#1E3A70]/20 p-6 rounded-lg flex items-center gap-6">
-                  <div className="bg-[#1E3A70]/10 w-16 h-16 rounded-full flex items-center justify-center">
-                    <span className="text-[#1E3A70] font-bold text-2xl">AZ</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-                      <h4 className="font-bold text-xl">Azure Expert Certifications</h4>
-                      <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mt-1 sm:mt-0">
-                        HIGHEST DEMAND
-                      </div>
-                    </div>
-                    <p className="text-gray-600">
-                      Advanced certifications like AZ-305 (Azure Solutions Architect) and AZ-400 (DevOps Engineer)
-                      can increase your salary potential by 25–30%.
-                    </p>
-                  </div>
+             
 
-                </div>
+                <div className="mx-4 sm:ml-12 bg-gradient-to-r from-[#f7f9fc] to-white border border-[#1E3A70]/20 p-4 sm:p-6 rounded-lg flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+  {/* Icon */}
+  <div className="bg-[#1E3A70]/10 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center">
+    <span className="text-[#1E3A70] font-bold text-xl sm:text-2xl">AZ</span>
+  </div>
+
+  {/* Text */}
+  <div className="space-y-2">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
+      <h4 className="font-bold text-lg sm:text-xl">Azure Expert Certifications</h4>
+      <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mt-1 sm:mt-0">
+        HIGHEST DEMAND
+      </div>
+    </div>
+    <p className="text-gray-600 text-sm sm:text-base">
+      Advanced certifications like AZ-305 (Azure Solutions Architect) and AZ-400 (DevOps Engineer)
+      can increase your salary potential by 25–30%.
+    </p>
+  </div>
+</div>
+
+
               </div>
             </div>
 
