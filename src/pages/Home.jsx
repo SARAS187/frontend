@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -116,10 +116,12 @@ export default function Home() {
       const { FullName, phone, email } = formData;
 
       if (!FullName || !phone || !email) {
+        console.log("ds");
         toast({ title: "Please fill all required fields", variant: "destructive" });
+          //   document.body.style.backgroundColor = "red";
         return;
       }
-
+  
       if (!/^\S+@\S+\.\S+$/.test(email)) {
         toast({ title: "Please enter a valid email address", variant: "destructive" });
         return;
@@ -153,62 +155,92 @@ export default function Home() {
     setFormStep((prev) => prev + 1);
   };
 
-  const handleSubmit = async () => {
-    try {
-      const payload = {
-        fullname: formData.FullName,
-        phonenumber: formData.phone,
-        email: formData.email,
-        college_name: formData.collegeName,
-        degree: formData.degree,
-        year_of_passing: formData.yearOfPassing,
-        certification: formData.course,
-        prior_certification: formData.experience,
-        other_degree: formData.customDegree,
-      };
+  // const handleSubmit = async () => {
+  //   try {
+  //     const payload = {
+  //       fullname: formData.FullName,
+  //       phonenumber: formData.phone,
+  //       email: formData.email,
+  //       college_name: formData.collegeName,
+  //       degree: formData.degree,
+  //       year_of_passing: formData.yearOfPassing,
+  //       certification: formData.course,
+  //       prior_certification: formData.experience,
+  //       other_degree: formData.customDegree,
+  //     };
 
-      const response = await fetch("http://localhost:5000/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+  //     const response = await fetch("http://localhost:5000/api/register", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(payload),
+  //     });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Submission failed");
-      }
+  //     if (!response.ok) {
+  //       const errorData = await response.json();
+  //       throw new Error(errorData.message || "Submission failed");
+  //     }
 
-      const result = await response.json();
-      console.log("Success:", result);
+  //     const result = await response.json();
+  //     console.log("Success:", result);
 
-      toast({
-        title: "Registration successful!",
-        description: "We'll contact you shortly with more details.",
-        variant: "default",
-      });
+  //     toast({
+  //       title: "Registration successful!",
+  //       description: "We'll contact you shortly with more details.",
+  //       variant: "default",
+  //     });
 
-      setPopupOpen(false);
-      setFormStep(1);
-      setFormData({
-        FullName: "",
-        phone: "",
-        email: "",
-        collegeName: "",
-        degree: "",
-        customDegree: "",
-        yearOfPassing: "",
-        course: "AZ-900",
-        experience: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Something went wrong",
-        description: error.message || "Please try again later.",
-        variant: "destructive",
-      });
-    }
+  //     setPopupOpen(false);
+  //     setFormStep(1);
+  //     setFormData({
+  //       FullName: "",
+  //       phone: "",
+  //       email: "",
+  //       collegeName: "",
+  //       degree: "",
+  //       customDegree: "",
+  //       yearOfPassing: "",
+  //       course: "AZ-900",
+  //       experience: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     toast({
+  //       title: "Something went wrong",
+  //       description: error.message || "Please try again later.",
+  //       variant: "destructive",
+  //     });
+  //   }
+  // };
+
+
+  const handleSubmit = () => {
+    // In a real app, you would submit the data to a server here
+    console.log("Form submitted:", formData);
+    
+    // Reset form and show success message
+    toast({
+      title: "Registration successful!",
+      description: "We'll contact you shortly with more details.",
+      // variant: "default"
+      variant: "success"
+    });
+    
+    setPopupOpen(false);
+    setFormStep(1);
+    setFormData({
+      FullName: "",
+            phone: "",
+            email: "",
+            collegeName: "",
+            degree: "",
+            customDegree: "",
+            yearOfPassing: "",
+            course: "AZ-900",
+            experience: "",
+
+    });
   };
+
 
   return (
     <div className="min-h-screen bg-[#f5f7fa] flex flex-col">
@@ -331,10 +363,10 @@ export default function Home() {
             <div className="h-1 w-20 bg-[#2E5090] mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
 
 
-            <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow">
+            <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow ">
               <CardHeader className="flex flex-row items-start gap-4">
                 <div className="bg-[#E8ECF5] p-3 rounded-lg">
                   <BriefcaseBusiness className="h-6 w-6 text-[#2E5090]" />
@@ -1362,7 +1394,9 @@ export default function Home() {
               </Button>
 
               <Button
-                className="bg-white text-[#2E5090] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+                // className="bg-white text-[#2E5090] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className="bg-white text-[#2E5090] hover:bg-[#2E5090] hover:text-white transition-colors duration-300"
+
                 size="sm"
                 asChild
               >
@@ -1551,21 +1585,33 @@ export default function Home() {
 
                 <div className="space-y-2">
                   <Label htmlFor="course">Select Certification <span className="text-red-500">*</span></Label>
+                 
+
                   <Select
-                    value={formData.course}
-                    onValueChange={(value) => handleSelectChange("course", value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select certification" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="AZ-900">AZ-900: Azure Fundamental</SelectItem>
-                      <SelectItem value="MS-900" disabled>MS-900: Microsoft 365 Fundaments (Coming Soon)</SelectItem>
-                      <SelectItem value="AI-900" disabled>AZ-104: Azure Admistrator Associate(Coming Soon)</SelectItem>
-                      <SelectItem value="DP-900" disabled>DP-900: Azure Data Fundamentals (Coming Soon)</SelectItem>
-                      <SelectItem value="SC-900" disabled>AZ-305 Azure Solution Architect Expert (Coming Soon)</SelectItem>
-                    </SelectContent>
-                  </Select>
+  value={formData.course}
+  onValueChange={(value) => handleSelectChange("course", value)}
+>
+  <SelectTrigger className="bg-white text-black border rounded-lg p-2">
+    <SelectValue placeholder="Select certification" />
+  </SelectTrigger>
+  <SelectContent className="bg-white text-black border rounded-lg shadow-lg mt-2 w-full">
+    <SelectItem value="AZ-900">AZ-900: Azure Fundamental</SelectItem>
+    <SelectItem value="MS-900" disabled>
+      MS-900: Microsoft 365 Fundamentals (Coming Soon)
+    </SelectItem>
+    <SelectItem value="AI-900" disabled>
+      AZ-104: Azure Administrator Associate (Coming Soon)
+    </SelectItem>
+    <SelectItem value="DP-900" disabled>
+      DP-900: Azure Data Fundamentals (Coming Soon)
+    </SelectItem>
+    <SelectItem value="SC-900" disabled>
+      AZ-305 Azure Solution Architect Expert (Coming Soon)
+    </SelectItem>
+  </SelectContent>
+</Select>
+
+
                 </div>
 
 
@@ -1635,7 +1681,8 @@ export default function Home() {
             {formStep < 4 ? (
               <Button
                 type="button"
-                className="bg-[#2E5090] hover:bg-[#1E3A70]"
+                className="bg-[#2E5090] hover:bg-[#1E3A70] text-white" 
+
                 onClick={handleNext}
               >
                 Continue
@@ -1643,7 +1690,7 @@ export default function Home() {
             ) : (
               <Button
                 type="button"
-                className="bg-[#2E5090] hover:bg-[#1E3A70]"
+                className="bg-[#2E5090] hover:bg-[#1E3A70] text-white"
                 onClick={handleSubmit}
               >
                 Register Now
