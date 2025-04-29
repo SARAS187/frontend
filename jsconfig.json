@@ -1,0 +1,41 @@
+// (without alias):
+// {
+//   "compilerOptions": {
+//     "jsx": "react-jsx",
+//     "module": "ESNext",
+//     "baseUrl": "."
+//   },
+//   "include": [
+//     "src/**/*"
+//   ],
+//   "exclude": [
+//     "node_modules",
+//     "build",
+//     "dist",
+//     "**/*.test.js"
+//   ]
+// }
+
+// (with alias):
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@lib/*": ["src/lib/*"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.test.js"
+  ]
+}

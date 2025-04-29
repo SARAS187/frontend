@@ -1,4 +1,4 @@
-import { Card, CardContent } from "./components/ui/card";
+import {Card, CardContent} from "../components/ui/card"
 import { AlertCircle } from "lucide-react";
 
 export default function NotFound() {
@@ -19,3 +19,10 @@ export default function NotFound() {
     </div>
   );
 }
+// import React from "react";
+
+// function NotFound() {
+//   return <h1>404 Page Not Found</h1>;
+// }
+
+// export default NotFound;

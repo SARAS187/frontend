@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Button } from "../components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../components/ui/dialog";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   Award,
   BriefcaseBusiness,
@@ -25,10 +25,9 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { useToast } from "../hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 
 export default function Home() {
@@ -1385,7 +1384,7 @@ export default function Home() {
 
       {/* Registration Popup */}
       <Dialog open={popupOpen} onOpenChange={setPopupOpen}>
-        <DialogContent className="sm:max-w-md h-[630px] overflow-y-auto">
+        <DialogContent className="sm:max-w-md h-[630px] overflow-y-auto bg-white">
           <DialogHeader>
             <div className="absolute right-4 top-4">
               {/* <button 
@@ -1652,13 +1651,6 @@ export default function Home() {
             )}
           </DialogFooter>
         </DialogContent>
-
-
-
-
-
-
-
 
       </Dialog>
 
