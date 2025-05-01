@@ -155,91 +155,94 @@ export default function Home() {
     setFormStep((prev) => prev + 1);
   };
 
-  // const handleSubmit = async () => {
-  //   try {
-  //     const payload = {
-  //       fullname: formData.FullName,
-  //       phonenumber: formData.phone,
-  //       email: formData.email,
-  //       college_name: formData.collegeName,
-  //       degree: formData.degree,
-  //       year_of_passing: formData.yearOfPassing,
-  //       certification: formData.course,
-  //       prior_certification: formData.experience,
-  //       other_degree: formData.customDegree,
-  //     };
-
-  //     const response = await fetch("http://localhost:5000/api/register", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(payload),
-  //     });
-
-  //     if (!response.ok) {
-  //       const errorData = await response.json();
-  //       throw new Error(errorData.message || "Submission failed");
-  //     }
-
-  //     const result = await response.json();
-  //     console.log("Success:", result);
-
-  //     toast({
-  //       title: "Registration successful!",
-  //       description: "We'll contact you shortly with more details.",
-  //       variant: "default",
-  //     });
-
-  //     setPopupOpen(false);
-  //     setFormStep(1);
-  //     setFormData({
-  //       FullName: "",
-  //       phone: "",
-  //       email: "",
-  //       collegeName: "",
-  //       degree: "",
-  //       customDegree: "",
-  //       yearOfPassing: "",
-  //       course: "AZ-900",
-  //       experience: "",
-  //     });
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     toast({
-  //       title: "Something went wrong",
-  //       description: error.message || "Please try again later.",
-  //       variant: "destructive",
-  //     });
-  //   }
-  // };
-
-
-  const handleSubmit = () => {
-    // In a real app, you would submit the data to a server here
-    console.log("Form submitted:", formData);
-    
-    // Reset form and show success message
-    toast({
-      title: "Registration successful!",
-      description: "We'll contact you shortly with more details.",
-      // variant: "default"
-      variant: "success"
-    });
-    
-    setPopupOpen(false);
-    setFormStep(1);
-    setFormData({
-      FullName: "",
-            phone: "",
-            email: "",
-            collegeName: "",
-            degree: "",
-            customDegree: "",
-            yearOfPassing: "",
-            course: "AZ-900",
-            experience: "",
-
-    });
+  const handleSubmit = async () => {
+    try {
+      const payload = {
+        fullname: formData.FullName,
+        phonenumber: formData.phone,
+        email: formData.email,
+        college_name: formData.collegeName,
+        degree: formData.degree,
+        year_of_passing: formData.yearOfPassing,
+        certification: formData.course,
+        prior_certification: formData.experience,
+        other_degree: formData.customDegree,
+      };
+  
+      const response = await fetch(`${import.meta.env.VITE_backend_API_URL}/register`, {
+   // const response = await fetch(import.meta.env.VITE_register_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Submission failed");
+      }
+  
+      const result = await response.json();
+      console.log("Success:", result);
+  
+      toast({
+        title: "Registration successful!",
+        description: "We'll contact you shortly with more details.",
+        // variant: "default",
+        variant: "success"
+        
+        
+      });
+  
+      setPopupOpen(false);
+      setFormStep(1);
+      setFormData({
+        FullName: "",
+        phone: "",
+        email: "",
+        collegeName: "",
+        degree: "",
+        customDegree: "",
+        yearOfPassing: "",
+        course: "AZ-900",
+        experience: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Something went wrong",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
+
+  // const handleSubmit = () => {
+  //   // In a real app, you would submit the data to a server here
+  //   console.log("Form submitted:", formData);
+    
+  //   // Reset form and show success message
+  //   toast({
+  //     title: "Registration successful!",
+  //     description: "We'll contact you shortly with more details.",
+  //     // variant: "default"
+  //     variant: "success"
+  //   });
+    
+  //   setPopupOpen(false);
+  //   setFormStep(1);
+  //   setFormData({
+  //     FullName: "",
+  //           phone: "",
+  //           email: "",
+  //           collegeName: "",
+  //           degree: "",
+  //           customDegree: "",
+  //           yearOfPassing: "",
+  //           course: "AZ-900",
+  //           experience: "",
+
+  //   });
+  // };
 
 
   return (
