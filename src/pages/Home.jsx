@@ -168,7 +168,7 @@ export default function Home() {
         prior_certification: formData.experience,
         other_degree: formData.customDegree,
       };
-    console.log("s",import.meta.env.VITE_backend_API_URL);
+
       const response = await fetch(`${import.meta.env.VITE_backend_API_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -214,35 +214,6 @@ export default function Home() {
       });
     }
   };
-
-  // const handleSubmit = () => {
-  //   // In a real app, you would submit the data to a server here
-  //   console.log("Form submitted:", formData);
-    
-  //   // Reset form and show success message
-  //   toast({
-  //     title: "Registration successful!",
-  //     description: "We'll contact you shortly with more details.",
-  //     // variant: "default"
-  //     variant: "success"
-  //   });
-    
-  //   setPopupOpen(false);
-  //   setFormStep(1);
-  //   setFormData({
-  //     FullName: "",
-  //           phone: "",
-  //           email: "",
-  //           collegeName: "",
-  //           degree: "",
-  //           customDegree: "",
-  //           yearOfPassing: "",
-  //           course: "AZ-900",
-  //           experience: "",
-
-  //   });
-  // };
-
 
   return (
     <div className="min-h-screen bg-[#f5f7fa] flex flex-col">
