@@ -168,9 +168,8 @@ export default function Home() {
         prior_certification: formData.experience,
         other_degree: formData.customDegree,
       };
-  
-      const response = await fetch(`${import.meta.env.VITE_backend_API_URL}/register`, {
-   // const response = await fetch(import.meta.env.VITE_register_API_URL, {
+    console.log("s",import.meta.env.VITE_backend_API_URL);
+      const response = await fetch(`${import.meta.env.VITE_backend_API_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
