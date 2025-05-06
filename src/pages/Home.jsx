@@ -710,7 +710,7 @@ export default function Home() {
                       <Users className="h-4 w-4" />
                     </div>
                     <div>
-                      <p className="font-medium">Next AZ-900 Batch: May 5th, 2025</p>
+                      <p className="font-medium">Next AZ-900 Batch: May 15th, 2025</p>
                       <p className="text-[#FF5722] font-bold">Limited to 15 Students Only!</p>
                     </div>
                   </div>
