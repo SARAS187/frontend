@@ -1435,7 +1435,7 @@ export default function Home() {
                 {formStep === 4 && "Almost Done!"}
               </DialogTitle>
               <DialogDescription className="text-center max-w-xs mx-auto">
-                {formStep === 1 && "Fill in your details to register for our upcoming AZ-900 batch starting May 5th, 2025."}
+                {formStep === 1 && "Fill in your details to register for our upcoming AZ-900 batch starting May 15th, 2025."}
                 {formStep === 2 && "Help us understand your academic background so we can tailor the training to your needs."}
                 {formStep === 3 && "Select which Microsoft certification you want to pursue."}
                 {formStep === 4 && "Just one more step to secure your spot in our certification program."}
