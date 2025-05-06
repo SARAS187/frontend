@@ -754,7 +754,7 @@ export default function Home() {
               >
                 Register for Next Batch
               </Button>
-              <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 04471279060</p>
+              <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
             </div>
           </div>
         </div>
