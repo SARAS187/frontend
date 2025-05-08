@@ -1651,7 +1651,8 @@ export default function Home() {
                     </li>
                     <li className="flex items-center">
                       <div className="bg-[#2E5090]/10 text-[#2E5090] h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">✓</div>
-                      <span>Scholarship test opportunity on 30th April</span>
+                      <span>Scholarship test opportunity in the 3rd week of May</span>
+ 
                     </li>
                   </ul>
                 </div>
