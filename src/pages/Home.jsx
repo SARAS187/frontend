@@ -723,7 +723,8 @@ export default function Home() {
                     <Award className="h-5 w-5 text-yellow-600" />
                     <h4 className="font-bold text-lg">Scholarship Opportunity</h4>
                   </div>
-                  <p className="text-sm mb-2 text-gray-600">Take our online assessment test on April 30th, 2025 and win:</p>
+                  <p className="text-sm mb-2 text-gray-600">Take our online assessment test in the 3rd week of May, 2025 and win:
+                  </p> 
                   <div className="flex items-center bg-yellow-50 p-2 rounded-md mb-3 border border-yellow-200">
                     <Calendar className="h-4 w-4 text-yellow-600 mr-2" />
                     <p className="text-sm font-medium text-yellow-700">Limited Time: Only 9 days left to register!</p>
