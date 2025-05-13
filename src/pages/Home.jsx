@@ -1037,11 +1037,7 @@ Stand out to employers by proving your understanding of core cloud concepts and 
   <div className="max-w-6xl mx-auto relative z-10">
     <div className="text-center mb-8">
       <h5 className="text-[#FF5722] font-semibold mb-2">Limited Time Offer – Take the Leap!</h5>
-      <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Career?</h2>
-      <p className="text-lg mb-6 max-w-3xl mx-auto text-gray-600">
-        Ready to level up your career? Start your Microsoft certification journey with expert-led training and full support—from beginner to certified. Gain real skills,
-        earn a globally recognized credential, and open the door to new career opportunities.
-      </p>
+      <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Skills?</h2>
     </div>
 
     <div className="bg-white rounded-xl p-8    max-w-3xl mx-auto shadow-lg border border-gray-400 ">
@@ -1194,7 +1190,7 @@ Stand out to employers by proving your understanding of core cloud concepts and 
                 size="sm"
                 asChild
               >
-                <a href="#azurepath">Certification Paths</a>
+                <a href="#paths">Certification Paths</a>
               </Button>
 
              
