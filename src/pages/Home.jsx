@@ -1197,14 +1197,7 @@ Stand out to employers by proving your understanding of core cloud concepts and 
                 <a href="#azurepath">Certification Paths</a>
               </Button>
 
-              <Button
-                className="bg-white/10 hover:bg-white/20 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
-                variant="ghost"
-                size="sm"
-                asChild
-              >
-                <a href="#cta">Pricing</a>
-              </Button>
+             
 
               <Button
                 // className="bg-white text-[#2E5090] hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
