@@ -1194,7 +1194,7 @@ Stand out to employers by proving your understanding of core cloud concepts and 
                 size="sm"
                 asChild
               >
-                <a href="#paths">Certification Paths</a>
+                <a href="#azurepath">Certification Paths</a>
               </Button>
 
               <Button
