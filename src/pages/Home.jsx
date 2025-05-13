@@ -23,7 +23,14 @@ import {
   TrendingUp,
   User,
   Users,
+  Cloud,
+  Rocket,
+  Pocket,
+  ChartNoAxesCombined ,
+  Server,
+  Brain,
   X,
+  Briefcase, DollarSign, BookOpen,  MonitorPlay, ShieldCheck, Lightbulb,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import AOS from "aos";
@@ -44,7 +51,18 @@ export default function Home() {
     course: "AZ-900",
     experience: "",
   });
-
+const data = [
+  { icon: <Briefcase />, title: 'Job Opportunities', certified: 'Preferred by recruiters for cloud roles.', uncertified: 'May be overlooked for roles needing cloud expertise.' },
+  { icon: <DollarSign />, title: 'Salary Potential', certified: 'Higher average salary (up to 25% more).', uncertified: 'Standard or lower salary ranges.' },
+  { icon: <Award />, title: 'Industry Recognition', certified: 'Global credibility with Microsoft-backed validation.', uncertified: 'No formal recognition of cloud skills.' },
+  { icon: <BookOpen />, title: 'Knowledge & Skills', certified: 'Proven understanding of Azure services, tools, and architectures.', uncertified: 'Skills may be limited or unverified.' },
+  { icon: <TrendingUp />, title: 'Career Growth', certified: '	Accelerated career path in cloud, DevOps, and IT roles.', uncertified: 'Slower progression without cloud certifications.' },
+  { icon: <Users />, title: 'Microsoft Community', certified: 'Included in exclusive networks, forums, and learning resources.', uncertified: 'Limited access to official communities.' },
+  { icon: <MonitorPlay />, title: 'Project Readiness', certified: 'Confidently handles real-world Azure deployments.', uncertified: 'May struggle with cloud-based projects.' },
+  { icon: <ShieldCheck />, title: 'Manager Confidence', certified: 'Validated expertise increases trust and confidence during hiring.', uncertified: 'Requires more effort to prove capabilities.' },
+  { icon: <Sparkles />, title: 'Competitive Edge', certified: 'Stand out in job applications and promotions.', uncertified: 'May blend in with non-specialized candidates.' },
+  { icon: <Lightbulb />, title: 'Training Discipline', certified: 'Demonstrates commitment to learning and upskilling.', uncertified: 'May be perceived as less proactive in professional development.' }
+];
   const { toast } = useToast();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const headerRef = useRef(null);
@@ -324,7 +342,7 @@ export default function Home() {
               size="lg"
               onClick={() => setPopupOpen(true)}
             >
-              Register for AZ-900
+              Apply for Scholarship Exam
             </Button>
             <Button
               className="bg-transparent border-2 border-white hover:bg-white/10 py-4 px-8 text-lg font-bold rounded-xl backdrop-blur-sm transition-transform hover:scale-105"
@@ -337,15 +355,21 @@ export default function Home() {
         </div>
       </header>
 
+
+
+
       {/* Why Get Certified Section */}
       <section className="py-16 px-6 bg-[#F8FAFD]">
         {/* <h5 className="text-left text-[#2E5090] font-semibold mb-2 uppercase tracking-wider">Career Impact</h5> */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 relative">
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-12 bg-[#2E5090]/10 rounded-full blur-xl"></div>
-            <h5 className=" text-[#2E5090] font-semibold mb-2 uppercase tracking-wider">Career Impact</h5>
-            <h2 className="text-4xl font-bold mb-2 relative z-10">Why Get Certified</h2>
-            <div className="h-1 w-20 bg-[#2E5090] mx-auto rounded-full"></div>
+            <h5 className=" text-[#2E5090] font-semibold mb-2 uppercase tracking-wider">Azure Overview</h5>
+            <h2 className="text-4xl font-bold mb-2 relative z-10">What Exactly is Microsoft Azure ?</h2>
+            {/* <p className="text-gray-600 max-w-3xl mx-auto  text-lg"> */}
+             <p className="text-gray-600 max-w-3xl mx-auto ">
+             A Powerful Cloud Platform for Modern Businesses</p>
+            {/* <div className="h-1 w-20 bg-[#2E5090] mx-auto rounded-full"></div> line  */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
@@ -354,14 +378,15 @@ export default function Home() {
             <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow ">
               <CardHeader className="flex flex-row items-start gap-4">
                 <div className="bg-[#E8ECF5] p-3 rounded-lg">
-                  <BriefcaseBusiness className="h-6 w-6 text-[#2E5090]" />
+                  {/* <BriefcaseBusiness className="h-6 w-6 text-[#2E5090]" /> */}
+                  <Cloud  className="h-6 w-6 text-[#2E5090]" />
                 </div>
                 <div>
                   <CardTitle className="transform transition-transform duration-300 group-hover:scale-[1.01] mb-2">
-                    Higher Employability
+                   Cloud Platform by Microsoft
                   </CardTitle>
                   <CardDescription className="transform transition-transform duration-300 group-hover:scale-[1.05]">
-                    90% of hiring managers factor certifications into their hiring decisions, giving certified candidates a competitive edge.
+                  Microsoft Azure is a robust cloud computing platform that offers a comprehensive suite of over 200 products and services, enabling organizations to innovate, deploy applications, and scale their operations with efficiency and flexibility. 
                   </CardDescription>
                 </div>
               </CardHeader>
@@ -370,14 +395,14 @@ export default function Home() {
             <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-row items-start gap-4">
                 <div className="bg-[#E8ECF5] p-3 rounded-lg">
-                  <LineChart className="h-6 w-6 text-[#2E5090]" />
+                  <Server className="h-6 w-6 text-[#2E5090]" />
                 </div>
                 <div>
                   <CardTitle className="transform transition-transform duration-300 group-hover:scale-[1.01] mb-2">
-                    Increased Earning Potential
+                    Flexible & Scalable Infrastructure 
                   </CardTitle>
                   <CardDescription className="transform transition-transform duration-300 group-hover:scale-[1.05]">
-                    Certified professionals earn up to 15% more than their non-certified counterparts, reflecting the value of proven expertise.
+                  Azure provides support for a wide range of operating systems and programming languages, facilitating seamless development and deployment across hybrid, on-premises, and multi-cloud environments
                   </CardDescription>
                 </div>
               </CardHeader>
@@ -386,14 +411,15 @@ export default function Home() {
             <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-row items-start gap-4">
                 <div className="bg-[#E8ECF5] p-3 rounded-lg">
-                  <Award className="h-6 w-6 text-[#2E5090]" />
+                  {/* <Award className="h-6 w-6 text-[#2E5090]" /> */}
+                  <Pocket className="h-6 w-6 text-[#2E5090]" />
                 </div>
                 <div>
                   <CardTitle className="transform transition-transform duration-300 group-hover:scale-[1.01] mb-2 ">
-                    Global Industry Recognition
+                    Enterprise-Grade Security 
                   </CardTitle>
                   <CardDescription className="transform transition-transform duration-300 group-hover:scale-[1.05]">
-                    Microsoft Certification is a trusted, worldwide credential that validates your skills and strengthens your professional credibility.
+                  Azure incorporates advanced security controls, compliance capabilities, and threat protection mechanisms, ensuring the integrity, confidentiality, and availability of organizational data across all cloud operations. 
                   </CardDescription>
                 </div>
               </CardHeader>
@@ -402,14 +428,15 @@ export default function Home() {
             <Card className="group border-t-4 border-t-[#2E5090] hover:shadow-lg transition-shadow">
               <CardHeader className="flex flex-row items-start gap-4">
                 <div className="bg-[#E8ECF5] p-3 rounded-lg">
-                  <Users className="h-6 w-6 text-[#2E5090]" />
+                  {/* <Users className="h-6 w-6 text-[#2E5090]" /> */}
+                  <Rocket  className="h-6 w-6 text-[#2E5090]" />
                 </div>
                 <div>
                   <CardTitle className="transform transition-transform duration-300 group-hover:scale-[1.01] mb-2 ">
-                    Expand Your Professional Network
+                  Empowering AI & Innovation 
                   </CardTitle>
                   <CardDescription className="transform transition-transform duration-300 group-hover:scale-[1.05]">
-                    Join a global community of certified professionals, opening doors to new connections, opportunities, and collaborations.
+                    Azure delivers cutting-edge tools for artificial intelligence, machine learning, and data analytics—driving innovation and enabling data-driven decision-making within diverse business sectors. 
                   </CardDescription>
                 </div>
               </CardHeader>
@@ -419,13 +446,102 @@ export default function Home() {
         </div>
       </section>
 
+<section id="ctap" className="py-20 px-6 relative overflow-hidden bg-gradient-to-r from-[#f8f8f8] to-[#dee9f8]">
+{/* <div className="absolute inset-0 bg-gradient-to-b from-white to-[#E8ECF5]"></div> */}
+  <div className="max-w-6xl mx-auto relative z-10">
+    <div className="text-center mb-8">
+      <span className="text-[#FF5722] font-semibold mb-2 bg-yellow-300">Limited Time Offer – Take the Leap!</span>
+      <h2 className="text-4xl font-bold mb-4">Why get Started with Azure?</h2>
+      <p className="text-lg mb-6 max-w-3xl mx-auto text-gray-600">
+ Explore the numerous advantages of Azure and elevate your career in the cloud industry.     </p>
+    </div>
+
+    {/* FLEX CONTAINER */}
+    <div className="flex flex-col md:flex-row gap-6 h-full">
+      
+      {/* KEY FEATURES - NOW ON THE LEFT */}
+     {/* KEY FEATURES - NOW ON THE LEFT */}
+<div className="w-full md:w-[40%] ">
+  <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 flex flex-col items-center justify-center text-center ">
+    <span className="bg-[#2E5090] text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+      AZ CERTIFICATION
+    </span>
+    <p className="text-lg  font-bold">
+      25% salary bump reported by certified professionals.
+    </p>
+    <br />
+    <p className="text-lg font-bold">
+Stand out to employers by proving your understanding of core cloud concepts and Azure services.
+    </p>
+  </div>
+</div>
+
+
+      {/* STUDENT BENEFITS - NOW ON THE RIGHT */}
+      <div className="w-full md:w-[60%] flex flex-col">
+        
+
+        <div className="bg-white p-6 rounded-xl shadow-md flex-grow min-h-[450px]">
+          <ul className="space-y-4">
+            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down">
+              {/* <div className="bg-[#2E5090] h-8 w-8 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
+                <Brain  />
+              </div> */}
+               <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
+                <Brain className=" text-[#2E5090]" />
+              </div>
+              <div>
+                <h4 className="font-semibold">In-Demand Skills for the Future</h4>
+                <p className="text-gray-600 text-sm">Master cloud technologies and stay ahead with skills that are increasingly required across industries</p>
+              </div>
+            </li>
+
+            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="100">
+              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
+                <Award  className=" text-[#2E5090]"/>
+              </div>
+              <div>
+                <h4 className="font-semibold">Globally Recognized Certification</h4>
+                <p className="text-gray-600 text-sm">Microsoft Azure certifications are respected worldwide, validating your cloud expertise and increasing global job mobility.</p>
+              </div>
+            </li>
+
+            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="200">
+              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
+               <User   className="text-[#2E5090]"/>
+              </div>
+
+              <div>
+                <h4 className="font-semibold">Preferred by Employers</h4>
+                <p className="text-gray-600 text-sm">Companies prioritize certified professionals for roles involving cloud architecture, development, and administration.</p>
+              </div>
+            </li>
+
+            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="300">
+              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
+                <ChartNoAxesCombined className=" text-[#2E5090]" />
+              </div>
+              <div>
+                <h4 className="font-semibold">Enhanced Job Readiness</h4>
+                <p className="text-gray-600 text-sm">Gain real-world skills and hands-on experience with Azure environments — ensuring you're job-ready from day one.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       {/* Microsoft Certification Path */}
       <section id="paths" className="py-20 px-6 bg-gradient-to-b from-white to-[#E8ECF5]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h5 className="text-[#FF5722] font-semibold mb-2">MICROSOFT CERTIFICATION ROADMAP</h5>
             <h2 className="text-4xl font-bold">Top Certification Paths to Accelerate Your Career</h2>
-            <div className="h-1 w-[300px] bg-[#2E5090] mx-auto rounded-full mt-2"></div>
+            {/* <div className="h-1 w-[300px] bg-[#2E5090] mx-auto rounded-full mt-2"></div> */}
 
             <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
               We've curated the most in-demand Microsoft certifications designed to maximize your career growth. These industry-recognized credentials help you stand out in today’s competitive job market and open doors to new opportunities.
@@ -681,85 +797,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="cta" className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#e6eeff] to-[#f5f7fa] z-0"></div>
+{/* <section className="py-20 px-6 bg-gradient-to-r from-[#e4eaf3] to-[#f8f8f8]"> */}
+  
+ <section className="py-20 px-6 bg-gradient-to-b from-white to-[#e4eaf3]">
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-8">
-            <h5 className="text-[#FF5722] font-semibold mb-2">Limited Time Offer – Take the Leap!</h5>
-            <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Career?</h2>
-            <p className="text-lg mb-6 max-w-3xl mx-auto text-gray-600">
-              Ready to level up your career? Start your Microsoft certification journey with expert-led training and full support—from beginner to certified. Gain real skills,
-              earn a globally recognized credential, and open the door to new career opportunities.
-            </p>
+
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl  font-bold text-center mb-12">Azure Certified vs Non-Certified </h2>
+    <div className="space-y-8">
+      {data.map((item, i) => (
+        <div key={i} className="flex items-start space-x-4" data-aos="fade-down" data-aos-delay={i * 100}>
+          <div className="bg-[#2E5090] text-white p-3 rounded-full shadow-md flex items-center justify-center h-12 w-12">
+            {item.icon}
           </div>
-
-          <div className="bg-white rounded-xl p-8 max-w-2xl mx-auto shadow-lg border border-gray-100">
-            <div className="flex flex-col md:flex-row gap-8 md:items-center">
-              <div className="flex-1">
-                <div className="bg-[#2E5090] text-white inline-block px-3 py-1 rounded-full text-sm font-semibold mb-3">AZ-900 CERTIFICATION</div>
-                <h3 className="text-2xl font-bold mb-2">
-                  All-inclusive package for just <span className="text-[#2E5090]">Rs 25,000</span>
-                </h3>
-                <p className="text-gray-500 mb-4">Complete training + certification exam fee included</p>
-
-                <div className="bg-[#f7f9fc] p-4 rounded-lg mb-4 border-l-4 border-[#2E5090]">
-                  <div className="flex items-start">
-                    <div className="bg-[#2E5090] text-white p-1 rounded-full mr-2 mt-1">
-                      <Users className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <p className="font-medium">Next AZ-900 Batch: May 15th, 2025</p>
-                      <p className="text-[#FF5722] font-bold">Limited to 15 Students Only!</p>
-                    </div>
-                  </div>
-                </div>
+          <div className="flex-1">
+            <h4 className="text-xl font-semibold text-[#2E5090] mb-1">{item.title}</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg hover:shadow-md ">
+                <h5 className="text-sm font-semibold text-green-600 mb-1">Azure Certified</h5>
+                <p className="text-gray-700 text-sm ">{item.certified}</p>
               </div>
-
-              <div className="flex-1">
-                <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-5 rounded-lg border border-yellow-200">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="h-5 w-5 text-yellow-600" />
-                    <h4 className="font-bold text-lg">Scholarship Opportunity</h4>
-                  </div>
-                  <p className="text-sm mb-2 text-gray-600">Take our online assessment test in the 3rd week of May, 2025 and win:
-                  </p> 
-                  <div className="flex items-center bg-yellow-50 p-2 rounded-md mb-3 border border-yellow-200">
-                    <Calendar className="h-4 w-4 text-yellow-600 mr-2" />
-                    <p className="text-sm font-medium text-yellow-700">Limited Time: Only 9 days left to register!</p>
-                  </div>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <div className="bg-yellow-500 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">1</div>
-                      <span><span className="font-semibold">50% off</span> for top performer</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="bg-gray-400 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">2</div>
-                      <span><span className="font-semibold">25% off</span> for 2nd and 3rd rank</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="bg-[#cd7f32] text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">3</div>
-                      <span><span className="font-semibold">10% off</span> for 4th and 5th rank</span>
-                    </li>
-                  </ul>
-                </div>
+              {/* <div className="bg-[#eef1f1]  p-4 rounded-lg shadow-sm"> */}
+                <div className="bg-white  p-4 rounded-lg hover:shadow-md">
+                <h5 className="text-sm font-semibold text-red-600 mb-1">Not Certified</h5>
+                <p className="text-gray-600 text-sm">{item.uncertified}</p>
               </div>
-            </div>
-
-            <div className="mt-6 text-center">
-              <Button
-                className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-3 px-8 text-lg shadow-md"
-                size="lg"
-                onClick={() => setPopupOpen(true)}
-              >
-                Register for Next Batch
-              </Button>
-              <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
             </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+ {/* [#f7f9fc] [#eef1f1] */}
+
+
+
+
 
       {/* ROI Calculator Section */}
       <section className="py-20 px-6 bg-white relative overflow-hidden">
@@ -770,7 +844,7 @@ export default function Home() {
           <div className="text-center mb-10">
             <h5 className="text-[#FF5722] font-semibold mb-2 uppercase tracking-wider">CERTIFICATION VALUE</h5>
             <h2 className="text-4xl font-bold mb-2">Calculate Your Potential ROI</h2>
-            <div className="h-1 w-[90px] bg-[#FF5722] mx-auto rounded-full mb-4 mt-2"></div>
+            {/* <div className="h-1 w-[90px] bg-[#FF5722] mx-auto rounded-full mb-4 mt-2"></div> */}
             <p className="text-gray-600 max-w-3xl mx-auto">
               Discover how Microsoft certification can elevate your career.
               Explore the impact on your salary, job opportunities, and long-term growth—and see the true value of getting certified.
@@ -821,7 +895,7 @@ export default function Home() {
                       <SelectTrigger id="certification-level" className="h-11">
                         <SelectValue placeholder="Select certification level" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="bg-white">
                         <SelectItem value="fundamental">
                           <div className="flex items-center">
                             <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
@@ -956,16 +1030,75 @@ export default function Home() {
         </div>
       </section>
 
+
+
+   <section id="cta" className="py-20 px-6 relative overflow-hidden">
+  <div className="absolute inset-0  bg-gradient-to-r from-[#f8f8f8] to-[#dee9f8]"></div>
+
+  <div className="max-w-6xl mx-auto relative z-10">
+    <div className="text-center mb-8">
+      <h5 className="text-[#FF5722] font-semibold mb-2">Limited Time Offer – Take the Leap!</h5>
+      <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Career?</h2>
+      <p className="text-lg mb-6 max-w-3xl mx-auto text-gray-600">
+        Ready to level up your career? Start your Microsoft certification journey with expert-led training and full support—from beginner to certified. Gain real skills,
+        earn a globally recognized credential, and open the door to new career opportunities.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-xl p-8    max-w-3xl mx-auto shadow-lg border border-gray-400 ">
+   {/* <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-xl p-8 max-w-2xl mx-auto shadow-lg border border-gray-400 "> */}
+      <div className="flex flex-col md:flex-row gap-8 md:items-center">
+        <div className="flex-1">
+          <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-5 rounded-lg border border-yellow-200">
+            {/* <div className="animate-pulse-zoom flex items-center gap-2 mb-2"> */}
+            <div className="animate-pulse-zoom flex items-center justify-center gap-2 mb-2">
+              <Award className="h-5 w-5 text-yellow-600" />
+              <h4 className=" font-bold text-lg  text-yellow-700">Scholarship Opportunity</h4>
+            </div>
+            <p className="text-sm mb-2 text-gray-600">Take our online assessment test in the 3rd week of May, 2025 and win:</p> 
+            <div className=" flex items-center bg-yellow-50 p-2 rounded-md mb-3 border border-yellow-200">
+              <Calendar className="h-4 w-4 text-yellow-600 mr-2" />
+              <p className="text-sm font-medium text-yellow-700">Limited Time: Only 9 days left to register!</p>
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center">
+                <div className="bg-yellow-500 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">1</div>
+                <span><span className="font-semibold">50% off</span> for top performer</span>
+              </li>
+              <li className="flex items-center">
+                <div className="bg-gray-400 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">2</div>
+                <span><span className="font-semibold">25% off</span> for 2nd and 3rd rank</span>
+              </li>
+              <li className="flex items-center">
+                <div className="bg-[#cd7f32] text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">3</div>
+                <span><span className="font-semibold">10% off</span> for 4th and 5th rank</span>
+             </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 flex flex-col text-center items-center">
+        <Button
+          className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-3 px-8 text-lg shadow-md"
+          size="lg"
+          onClick={() => setPopupOpen(true)}
+        >
+          Register for a Scholarship Exam
+        </Button>
+        <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Testimonials Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-white to-[#E8ECF5]/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h5 className="text-[#2E5090] font-semibold mb-2">SUCCESS STORIES</h5>
-            <h2 className="text-4xl font-bold mb-4">What Our Students Say</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Hundreds of learners have advanced their careers through our Microsoft certification training.
-              Discover how real students turned skills into success -- and how you can too.
-            </p>
+            <h2 className="text-4xl font-bold mb-4">Stand out to employers by proving your understanding of core cloud concepts and Azure services</h2>
+          
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -983,15 +1116,15 @@ export default function Home() {
               {/* User info section - comes from top */}
               <div className="flex items-center mb-4 mt-6" data-aos="fade-down" data-aos-delay="0">
                 <div className="ml-3 text-center w-full">
-                  <h4 className="font-semibold">Aditya Sharma</h4>
-                  <p className="text-sm text-gray-500">BCA Graduate, Now Azure Developer</p>
+                  <h4 className="font-semibold">Stephanie Markese</h4>
+                  <p className="text-sm text-gray-500">Senior VP, NextPath Career Partners</p>
                 </div>
               </div>
 
               {/* Testimonial section - comes from bottom */}
               <div className="pt-4 border-t border-gray-100" data-aos="fade-up" data-aos-delay="300">
                 <p className="text-gray-700 italic">
-                  "The structured approach to learning Azure fundamentals helped me pass my AZ-900 exam on the first attempt. The hands-on labs were particularly useful."
+                  "We’re thrilled to join the Microsoft Partner ecosystem… With this partnership, we can provide access to highly qualified Microsoft-certified professionals, giving our clients a competitive edge in building future-ready teams."
                 </p>
               </div>
             </div>
@@ -1005,14 +1138,14 @@ export default function Home() {
 
               <div className="flex items-center mb-4 mt-6" data-aos="fade-down" data-aos-delay="0">
                 <div className="ml-3 text-center w-full">
-                  <h4 className="font-semibold">Priya Gupta</h4>
-                  <p className="text-sm text-gray-500">B.Tech Student, Part-time Cloud Associate</p>
+                  <h4 className="font-semibold">James L. Conway</h4>
+                  <p className="text-sm text-gray-500">Vice President, Parian-Wang Global</p>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-gray-100" data-aos="fade-up" data-aos-delay="300">
                 <p className="text-gray-700 italic">
-                  "I received a 25% scholarship after the assessment test, which made the program affordable for me. Within two months of certification, I landed a job at a tech startup."
+                  "At Parian-Wang Global, we invest in getting our employees Microsoft-certified because we found that certified employees work more efficiently… We also have found an increase in employee retention, job satisfaction, server uptime for our customers and a corresponding reduction in operating costs."
                 </p>
               </div>
             </div>
@@ -1025,14 +1158,14 @@ export default function Home() {
 
               <div className="flex items-center mb-4 mt-6" data-aos="fade-down" data-aos-delay="0">
                 <div className="ml-3 text-center w-full">
-                  <h4 className="font-semibold">Rohit Mehta</h4>
-                  <p className="text-sm text-gray-500">MCA Graduate, Cloud Solutions Architect</p>
+                  <h4 className="font-semibold">Kevin Lutz</h4>
+                  <p className="text-sm text-gray-500">Senior Systems Engineer, Productivity Point International</p>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-gray-100" data-aos="fade-up" data-aos-delay="300">
                 <p className="text-gray-700 italic">
-                  "The mock exams and practice questions were nearly identical to what I saw in the actual certification exam. The instructors were always available to clear doubts."
+                  "Being a Microsoft Certified Systems Engineer has helped me build credibility when promoting our company to new clients… Having Microsoft Certified Systems Engineers on staff assures prospective clients that we provide top-level service and are dedicated to and demand that our employees have a high standard of knowledge and ability."
                 </p>
               </div>
             </div>
@@ -1043,10 +1176,10 @@ export default function Home() {
       </section>
 
       {/* Benefits & Pricing Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-[#E8ECF5] to-white">
+      {/* <section className="py-20 px-6 bg-gradient-to-b from-[#E8ECF5] to-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Benefits Column */}
+           
             <div className="flex flex-col h-full">
               <div className="text-center mb-8 md:text-left">
                 <h5 className="text-[#2E5090] font-semibold mb-2">WHAT YOU GET</h5>
@@ -1187,7 +1320,7 @@ export default function Home() {
 
             </div>
 
-            {/* Pricing Column */}
+       
             <div className="flex flex-col h-full">
               <div className="text-center mb-8 md:text-left">
                 <h5 className="text-[#FF5722] font-semibold mb-2">PRICING COMPARISON</h5>
@@ -1201,7 +1334,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white">
                   <div className="overflow-hidden">
-                    {/* Other Options */}
+                   
                     <div className="p-5 border-b">
                       <h4 className="font-semibold text-gray-700 mb-3">Other Training Providers</h4>
 
@@ -1236,7 +1369,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* ProofPoint */}
+                
                     <div className="p-5 bg-[#f7f9fc] relative">
                       <div className="absolute top-0 right-5 -mt-5">
                         <div className="bg-[#FF5722] text-white px-4 py-1 rounded-full font-bold shadow-lg">
@@ -1350,7 +1483,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-[#1E3A70] to-[#2E5090] text-white py-10 px-6 mt-auto">
@@ -1421,22 +1554,20 @@ export default function Home() {
               </button> */}
 
 
-
-
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-[#2E5090] text-white p-2 rounded-full mb-2">
                 <GraduationCap className="h-6 w-6" />
               </div>
               <DialogTitle className="text-center text-xl font-bold">
-                {formStep === 1 && "Start Your Microsoft Certification Journey"}
+                {formStep === 1 && "Register for free Scholarship Exam"}
 
                 {formStep === 2 && "Education Background"}
                 {formStep === 3 && "Choose Your Microsoft Certification"}
                 {formStep === 4 && "Almost Done!"}
               </DialogTitle>
               <DialogDescription className="text-center max-w-xs mx-auto">
-                {formStep === 1 && "Fill in your details to register for our upcoming AZ-900 batch starting May 15th, 2025."}
+                {/* {formStep === 1 && "Fill in your details to register for our upcoming AZ-900 batch starting May 15th, 2025."} */}
                 {formStep === 2 && "Help us understand your academic background so we can tailor the training to your needs."}
                 {formStep === 3 && "Select which Microsoft certification you want to pursue."}
                 {formStep === 4 && "Just one more step to secure your spot in our certification program."}
@@ -1576,7 +1707,7 @@ export default function Home() {
 
 
                 <div className="space-y-2">
-                  <Label htmlFor="course">Select Certification <span className="text-red-500">*</span></Label>
+                  <Label htmlFor="course">Select the certification you are interested in <span className="text-red-500">*</span></Label>
                  
 
                   <Select
@@ -1638,7 +1769,7 @@ export default function Home() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="bg-[#f7f9fc] p-4 rounded-lg border border-[#2E5090]/20">
+                {/* <div className="bg-[#f7f9fc] p-4 rounded-lg border border-[#2E5090]/20">
                   <h4 className="font-medium text-[#2E5090] mb-2">Exclusive Benefits</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
@@ -1655,7 +1786,7 @@ export default function Home() {
  
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             )}
           </div>
