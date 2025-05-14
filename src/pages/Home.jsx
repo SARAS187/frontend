@@ -35,8 +35,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
+import image5 from '../assets/image5.png';
 export default function Home() {
   const [popupOpen, setPopupOpen] = useState(false);
   const [formStep, setFormStep] = useState(1);
@@ -238,7 +237,7 @@ const data = [
       {/* Header */}
       <header
         ref={headerRef}
-        className="relative text-white py-24 px-6 text-center overflow-hidden cursor-none"
+        className="relative text-white py-10 px-6 text-center overflow-hidden cursor-none"
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHeaderHovered(true)}
         onMouseLeave={() => setIsHeaderHovered(false)}
@@ -299,22 +298,19 @@ const data = [
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          {/* Logo with glow effect */}
-          {/* <div className="flex items-center justify-center mb-5 relative">
-            <div className="absolute w-12 h-12 bg-blue-400 rounded-full filter blur-xl opacity-30"></div>
-            <Shield className="h-14 w-14 mr-3 drop-shadow-lg text-white" />
-            <span className="text-xl font-semibold tracking-wide">SGSN Associates Pvt. Ltd.</span>
-          </div> */}
+          
 
           <div className="flex items-center justify-center mb-5 relative w-full px-4">
   {/* Glow circle, now larger and responsive */}
   <div className="absolute left-1/2 top-1/2 w-16 h-16 sm:w-12 sm:h-12 bg-blue-400 rounded-full filter blur-2xl opacity-30 transform -translate-x-1/2 -translate-y-1/2"></div>
 
-  {/* Icon and Text */}
-  <Shield className="h-12 w-12 sm:h-14 sm:w-14 mr-2 sm:mr-3 drop-shadow-lg text-white" />
+  <div className="flex flex-col items-center">
+  <img src={image5} alt="Example" className="h-40 w-90 mb-2" />
   <span className="text-lg sm:text-xl font-semibold tracking-wide text-center">
-    SGSN Associates Pvt. Ltd.
+   An Initiative by SGSN Associates
   </span>
+</div>
+
 </div>
 
 
@@ -461,7 +457,7 @@ const data = [
       {/* KEY FEATURES - NOW ON THE LEFT */}
      {/* KEY FEATURES - NOW ON THE LEFT */}
 <div className="w-full md:w-[40%] ">
-  <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 flex flex-col items-center justify-center text-center ">
+  <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 flex flex-col items-center justify-center text-center min-h-[470px] ">
     <span className="bg-[#2E5090] text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
       AZ CERTIFICATION
     </span>
@@ -1011,9 +1007,9 @@ Stand out to employers by proving your understanding of core cloud concepts and 
                     </div>
                     <div>
                       <h5 className="font-medium text-[#FF5722] mb-1">Cost-Benefit Analysis</h5>
-                      <p className="text-sm">Your ₹25,000 investment in certification could yield an additional ₹{roiResult.increase.toLocaleString()} per year in income.</p>
+                      <p className="text-sm">An investment in professional certification holds the potential to elevate your annual earnings by ₹{roiResult.increase.toLocaleString()} or more.</p>
                     </div>
-                  </div>
+                    </div>
                 </div>
 
                 <Button
@@ -1165,7 +1161,6 @@ Stand out to employers by proving your understanding of core cloud concepts and 
               </div>
             </div>
 
-
           </div>
         </div>
       </section>
@@ -1174,11 +1169,17 @@ Stand out to employers by proving your understanding of core cloud concepts and 
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center mb-4 md:mb-0">
-              <Shield className="h-8 w-8 mr-2" />
-              <div>
+               <div className="flex flex-col ">
+  <img src={image5} alt="Example" className="h-25 w-40 ml-10" />
+  <span className="">
+    An Initiative by SGSN Associates
+  </span>
+</div>
+
+              {/* <div>
                 <p className="font-bold text-lg">ProofPoint</p>
                 <p className="text-xs opacity-80">Your Skills. Certified.</p>
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
