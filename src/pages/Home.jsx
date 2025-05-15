@@ -1071,12 +1071,13 @@ Stand out to employers by proving your understanding of core cloud concepts and 
 
       <div className="mt-6 flex flex-col text-center items-center">
         <Button
-          className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-3 px-8 text-lg shadow-md"
-          size="lg"
-          onClick={() => setPopupOpen(true)}
-        >
-          Register for a Scholarship Exam
-        </Button>
+  className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-2 px-4 text-sm sm:py-3 sm:px-8 sm:text-lg shadow-md w-full sm:w-auto"
+  size="lg"
+  onClick={() => setPopupOpen(true)}
+>
+  Register For a Free Scholarship Exam
+</Button>
+
         <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
       </div>
     </div>
@@ -1165,23 +1166,23 @@ Stand out to employers by proving your understanding of core cloud concepts and 
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-[#1E3A70] to-[#2E5090] text-white py-10 px-6 mt-auto">
+      <footer className="bg-gradient-to-r from-[#1E3A70] to-[#2E5090] text-white py-7 px-6 mt-auto">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            <div className="flex items-center mb-4 md:mb-0">
-               <div className="flex flex-col ">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">     
+               {/* <div className="flex flex-col ">
   <img src={image5} alt="Example" className="h-25 w-40 ml-10" />
   <span className="">
     An Initiative by SGSN Associates
   </span>
+</div> */}
+<div className="flex flex-col items-center text-center px-4 mb-4">
+  <img src={image5} alt="Logo" className="h-[80px] w-auto mb-2 object-contain" />
+  <span className="text-sm">An Initiative by SGSN Associates</span>
 </div>
-
               {/* <div>
                 <p className="font-bold text-lg">ProofPoint</p>
                 <p className="text-xs opacity-80">Your Skills. Certified.</p>
               </div> */}
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
 
 
