@@ -452,84 +452,72 @@ const data = [
     </div>
 
     {/* FLEX CONTAINER */}
-    <div className="flex flex-col md:flex-row gap-6 h-full">
-      
-      {/* KEY FEATURES - NOW ON THE LEFT */}
-     {/* KEY FEATURES - NOW ON THE LEFT */}
-<div className="w-full md:w-[40%] ">
-  <div className="bg-white rounded-lg shadow-md border border-gray-100 p-6 flex flex-col items-center justify-center text-center min-h-[470px] ">
-    <span className="bg-[#2E5090] text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-      AZ CERTIFICATION
-    </span>
-    <p className="text-lg  font-bold">
-      25% salary bump reported by certified professionals.
-    </p>
-    <br />
-    <p className="text-lg font-bold">
-Stand out to employers by proving your understanding of core cloud concepts and Azure services.
-    </p>
-  </div>
-</div>
+   <div className="px-7">
+    <div className="bg-white p-6 rounded-xl shadow-md flex-grow min-h-[450px] ">
+      <ul className="space-y-4">
+        <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down">
+          <div className="bg-[#dee5f5] h-10 w-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <DollarSign className="text-[#2E5090]" />
+          </div>
+          <div>
+            <h4 className="font-semibold ">Salary Bump</h4>
+            <p className="text-gray-600 text-sm">
+               Certified professionals typically report a 25% average salary increase across various industries.
+            </p>
+          </div>
+        </li>
+        <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down"  data-aos-delay="100">
+          <div className="bg-[#dee5f5] h-10 w-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <Brain className="text-[#2E5090]" />
+          </div>
+          <div>
+            <h4 className="font-semibold">In-Demand Skills for the Future</h4>
+            <p className="text-gray-600 text-sm">
+              Master cloud technologies and stay ahead with skills that are increasingly required across industries.
+            </p>
+          </div>
+        </li>
 
+        <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="200">
+          <div className="bg-[#dee5f5] h-10 w-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <Award className="text-[#2E5090]" />
+          </div>
+          <div>
+            <h4 className="font-semibold">Globally Recognized Certification</h4>
+            <p className="text-gray-600 text-sm">
+              Microsoft Azure certifications are respected worldwide, validating your cloud expertise and increasing global job mobility.
+            </p>
+          </div>
+        </li>
 
-      {/* STUDENT BENEFITS - NOW ON THE RIGHT */}
-      <div className="w-full md:w-[60%] flex flex-col">
-        
+        <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="300">
+          <div className="bg-[#dee5f5] h-10 w-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <User className="text-[#2E5090]" />
+          </div>
+          <div>
+            <h4 className="font-semibold">Preferred by Employers</h4>
+            <p className="text-gray-600 text-sm">
+              Companies prioritize certified professionals for roles involving cloud architecture, development, and administration.
+            </p>
+          </div>
+        </li>
 
-        <div className="bg-white p-6 rounded-xl shadow-md flex-grow min-h-[450px]">
-          <ul className="space-y-4">
-            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down">
-              {/* <div className="bg-[#2E5090] h-8 w-8 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
-                <Brain  />
-              </div> */}
-               <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
-                <Brain className=" text-[#2E5090]" />
-              </div>
-              <div>
-                <h4 className="font-semibold">In-Demand Skills for the Future</h4>
-                <p className="text-gray-600 text-sm">Master cloud technologies and stay ahead with skills that are increasingly required across industries</p>
-              </div>
-            </li>
-
-            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="100">
-              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
-                <Award  className=" text-[#2E5090]"/>
-              </div>
-              <div>
-                <h4 className="font-semibold">Globally Recognized Certification</h4>
-                <p className="text-gray-600 text-sm">Microsoft Azure certifications are respected worldwide, validating your cloud expertise and increasing global job mobility.</p>
-              </div>
-            </li>
-
-            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="200">
-              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
-               <User   className="text-[#2E5090]"/>
-              </div>
-
-              <div>
-                <h4 className="font-semibold">Preferred by Employers</h4>
-                <p className="text-gray-600 text-sm">Companies prioritize certified professionals for roles involving cloud architecture, development, and administration.</p>
-              </div>
-            </li>
-
-            <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="300">
-              <div className="bg-[#dee5f5]  h-10 w-10 rounded-full text-white flex items-center justify-center mr-3 flex-shrink-0">
-                <ChartNoAxesCombined className=" text-[#2E5090]" />
-              </div>
-              <div>
-                <h4 className="font-semibold">Enhanced Job Readiness</h4>
-                <p className="text-gray-600 text-sm">Gain real-world skills and hands-on experience with Azure environments — ensuring you're job-ready from day one.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+        <li className="flex items-start bg-[#f7f9fc] p-3 rounded-lg hover:shadow-md" data-aos="fade-down" data-aos-delay="400">
+          <div className="bg-[#dee5f5] h-10 w-10 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+            <ChartNoAxesCombined className="text-[#2E5090]" />
+          </div>
+          <div>
+            <h4 className="font-semibold">Enhanced Job Readiness</h4>
+            <p className="text-gray-600 text-sm">
+              Gain real-world skills and hands-on experience with Azure environments — ensuring you're job-ready from day one.
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
+</div>
   </div>
 </section>
-
-
       {/* Microsoft Certification Path */}
       <section id="paths" className="py-20 px-6 bg-gradient-to-b from-white to-[#E8ECF5]">
         <div className="max-w-6xl mx-auto">
@@ -1013,7 +1001,7 @@ Stand out to employers by proving your understanding of core cloud concepts and 
                 </div>
 
                 <Button
-                  className="w-full bg-[#FF5722] hover:bg-[#E64A19] text-white font-medium shadow-sm"
+                  className="w-full bg-[#FF5722] hover:bg-[#E64A19] text-white text-sm shadow-sm sm:text-lg"
                   onClick={() => setPopupOpen(true)}
                 >
                   Start Your Certification Journey
