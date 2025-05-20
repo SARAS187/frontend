@@ -30,7 +30,7 @@ import {
   Server,
   Brain,
   X,
-  Briefcase, DollarSign, BookOpen,  MonitorPlay, ShieldCheck, Lightbulb,
+  Briefcase, DollarSign, BookOpen,  MonitorPlay, ShieldCheck, Lightbulb, Trophy, Medal, Star ,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import AOS from "aos";
@@ -337,7 +337,7 @@ const data = [
               size="lg"
               onClick={() => setPopupOpen(true)}
             >
-              Apply for Scholarship Exam
+              Apply for free Scholarship Exam
             </Button>
             <Button
               className="bg-transparent border-2 border-white hover:bg-white/10 py-4 px-8 text-lg font-bold rounded-xl backdrop-blur-sm transition-transform hover:scale-105"
@@ -350,8 +350,342 @@ const data = [
         </div>
       </header>
 
+<section id="cta" className="py-20 px-6 relative overflow-hidden">
+  <div className="absolute inset-0  bg-gradient-to-r from-[#f8f8f8] to-[#dee9f8]"></div>
+
+  <div className="max-w-6xl mx-auto relative z-10">
+    <div className="text-center mb-8">
+<span className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 text-[#E64A19] font-semibold ">
+  Limited Time Offer – Take the Leap!
+</span>
+  <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Skills?</h2>
+    </div>
+
+    <div className="bg-white rounded-xl p-8    max-w-3xl mx-auto shadow-lg border border-gray-400 ">
+   {/* <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-xl p-8 max-w-2xl mx-auto shadow-lg border border-gray-400 "> */}
+      <div className="flex flex-col md:flex-row gap-8 md:items-center">
+        <div className="flex-1">
+          <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-5 rounded-lg border border-yellow-200">
+            {/* <div className="animate-pulse-zoom flex items-center gap-2 mb-2"> */}
+            <div className="w-full flex items-center justify-center gap-2 mb-2 animate-pulse-zoom">
+  <Award className="h-5 w-5 text-yellow-600" />
+  <h4 className="font-bold text-lg text-yellow-700">Scholarship Opportunity</h4>
+</div>
+
+            <p className="text-sm mb-2 text-gray-600">Take our online assessment test and win:</p> 
+            <div className=" flex items-center bg-yellow-50 p-2 rounded-md mb-3 border border-yellow-200">
+              <Calendar className="h-4 w-4 text-yellow-600 mr-2" />
+              <p className="text-sm font-medium text-yellow-700">Limited Time offer!</p>
+            </div>
+            {/* <ul className="space-y-2 text-sm">
+              <li className="flex items-center">
+                <div className="bg-yellow-500 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">1</div>
+                <span><span className="font-semibold">50% off</span> for top performer</span>
+              </li>
+              <li className="flex items-center">
+                <div className="bg-gray-400 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">2</div>
+                <span><span className="font-semibold">25% off</span> for 2nd and 3rd rank</span>
+              </li>
+              <li className="flex items-center">
+                <div className="bg-[#cd7f32] text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">3</div>
+                <span><span className="font-semibold">10% off</span> for 4th and 5th rank</span>
+             </li>
+            </ul> */}
+           
+
+<ul className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+  <li className="bg-yellow-100 border border-yellow-200 p-4 rounded-lg text-center">
+    <div className="flex justify-center mb-2">
+      <Trophy className="text-yellow-600 text-3xl" />
+    </div>
+    <div>
+      <span className="font-semibold">50% off</span><br />
+      Top performer
+    </div>
+  </li>
+
+  <li className="bg-gray-100 border border-gray-200 p-4 rounded-lg text-center">
+    <div className="flex justify-center mb-2">
+      <Medal className="text-gray-600 text-3xl" />
+    </div>
+    <div>
+      <span className="font-semibold">25% off</span><br />
+      2nd & 3rd rank
+    </div>
+  </li>
+
+  <li className="bg-[#facfa4] border border-amber-200 p-4 rounded-lg text-center">
+    <div className="flex justify-center mb-2">
+      <Star className="text-[#cd7f32] text-3xl" />
+    </div>
+    <div>
+      <span className="font-semibold">10% off</span><br />
+      4th & 5th rank
+    </div>
+  </li>
+</ul>
 
 
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 flex flex-col text-center items-center">
+        <Button
+  className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-2 px-4 text-sm sm:py-3 sm:px-8 sm:text-lg shadow-md w-full sm:w-auto"
+  size="lg"
+  onClick={() => setPopupOpen(true)}
+>
+  Register For a Free Scholarship Exam
+</Button>
+
+        <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section className="py-20 px-6 bg-white relative overflow-hidden">
+        {/* Simple decorative elements */}
+        <div className="absolute inset-0 bg-[#F8FAFD]/80"></div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-10">
+            {/* <h5 className="text-[#FF5722] font-semibold mb-2 uppercase tracking-wider">CERTIFICATION VALUE</h5> */}
+          <span className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-200 to-yellow-300    text-[#E64A19] font-semibold ">
+ CERTIFICATION VALUE
+          </span>
+            <h2 className="text-4xl font-bold mb-2">Calculate Your Potential ROI</h2>
+            {/* <div className="h-1 w-[90px] bg-[#FF5722] mx-auto rounded-full mb-4 mt-2"></div> */}
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Discover how Microsoft certification can elevate your career.
+              Explore the impact on your salary, job opportunities, and long-term growth—and see the true value of getting certified.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg max-w-4xl mx-auto mb-12 overflow-hidden border border-gray-200">
+            <div className="flex flex-col md:flex-row">
+              {/* Left column - Input */}
+              <div className="md:w-1/2 p-8 border-r border-gray-100">
+                <h4 className="text-xl font-bold mb-6 flex items-center text-[#2E5090]">
+                  <CircleDollarSign className="h-5 w-5 mr-2" />
+                  Enter Your Details
+                </h4>
+
+                <div className="space-y-6">
+                  <div>
+                    <Label htmlFor="current-salary" className="text-sm font-medium block mb-2">
+                      Current Annual Salary (in Rs)
+                    </Label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+                      <Input
+                        id="current-salary"
+                        type="number"
+                        className="pl-8 h-11"
+                        value={salary}
+                        onChange={(e) => setSalary(parseInt(e.target.value) || 0)}
+                        min={200000}
+                        max={2000000}
+                        step={50000}
+                      />
+                    </div>
+                    <div className="mt-1 flex justify-between text-xs text-gray-500">
+                      <span>₹2 Lakhs</span>
+                      <span>₹20 Lakhs+</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="certification-level" className="text-sm font-medium block mb-2">
+                      Microsoft Certification Target
+                    </Label>
+                    <Select
+                      value={certificationLevel}
+                      onValueChange={(value) => setCertificationLevel(value)}
+                    >
+                      <SelectTrigger id="certification-level" className="h-11">
+                        <SelectValue placeholder="Select certification level" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-white">
+                        <SelectItem value="fundamental">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                            Fundamental (AZ-900)
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="associate">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                            Associate (AZ-104)
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="expert">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                            Expert (AZ-305)
+                          </div>
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <h5 className="font-medium mb-4">Average Salary Increases</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center mr-2">
+                        <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-medium">Fundamentals: </span>
+                        <span className="text-green-600">15% increase</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center mr-2">
+                        <div className="h-2 w-2 rounded-full bg-purple-500"></div>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-medium">Associate: </span>
+                        <span className="text-green-600">25% increase</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center">
+                      <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center mr-2">
+                        <div className="h-2 w-2 rounded-full bg-orange-500"></div>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-medium">Expert: </span>
+                        <span className="text-green-600">40% increase</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right column - Results */}
+              <div className="md:w-1/2 bg-[#F8FAFD] p-8">
+                <h4 className="text-xl font-bold mb-6 flex items-center text-[#2E5090]">
+                  <Sparkles className="h-5 w-5 mr-2" />
+                  Your Results
+                </h4>
+
+                <div className="bg-white rounded-lg p-5 mb-6 shadow-sm border border-gray-100">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-gray-600">Current Salary:</span>
+                    <span className="font-bold text-lg">₹{salary.toLocaleString()}</span>
+                  </div>
+
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-gray-600">Estimated Increase:</span>
+                    <div className="flex items-center">
+                      <div className="h-6 w-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
+                        <TrendingUp className="h-3 w-3 text-green-600" />
+                      </div>
+                      <span className="font-bold text-lg text-green-600">+₹{roiResult.increase.toLocaleString()}</span>
+                    </div>
+                  </div>
+
+                  <div className="h-px w-full bg-gray-100 my-4"></div>
+
+                  {/* <div className="flex justify-between items-center">
+                    <span className="text-gray-800 font-medium">New Potential Salary:</span>
+                    <span className="font-bold text-xl text-[#2E5090]">₹{roiResult.newSalary.toLocaleString()}</span>
+                  </div> */}
+                 <div className="flex justify-between items-center">
+  <span className="text-gray-800 font-medium ">New Potential Salary:</span>
+  <span className="font-bold text-xl text-[#2E5090] animate-pulse-zoom">
+    ₹{roiResult.newSalary.toLocaleString()}
+  </span>
+</div>
+
+
+                </div>
+
+                <div className="bg-gradient-to-r from-[#2E5090] to-[#1E3A70] text-white rounded-lg overflow-hidden shadow mb-6">
+                  <div className="p-5">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-sm opacity-90">Return on Investment</div>
+                        <div className="text-3xl font-bold">
+                          {roiResult.roi}%
+                        </div>
+                      </div>
+                      <div className="bg-white/10 p-3 rounded-full">
+                        <CircleDollarSign className="h-8 w-8" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="px-5 py-3 bg-[#1E3A70] text-sm">
+                    Based on {certificationLevel[0].toUpperCase() + certificationLevel.slice(1)} certification level
+                  </div>
+                </div>
+
+                <div className="bg-[#FF5722]/10 border border-[#FF5722]/20 rounded-lg p-4 mb-6">
+                  <div className="flex items-start">
+                    <div className="bg-[#FF5722] p-2 rounded-full text-white mr-3 mt-1">
+                      <Sliders className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <h5 className="font-medium text-[#FF5722] mb-1">Cost-Benefit Analysis</h5>
+                      <p className="text-sm">An investment in professional certification holds the potential to elevate your annual earnings by ₹{roiResult.increase.toLocaleString()} or more.</p>
+                    </div>
+                    </div>
+                </div>
+
+                <Button
+                  className="w-full bg-[#FF5722] hover:bg-[#E64A19] text-white text-sm shadow-sm sm:text-lg"
+                  onClick={() => setPopupOpen(true)}
+                >
+                  Start Your Certification Journey
+                </Button>
+                <p className="text-xs text-center text-gray-500 mt-2">Includes Microsoft exam fee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section className="py-20 px-6 bg-gradient-to-b from-white to-[#e4eaf3]">
+
+
+  <div className="max-w-6xl mx-auto">
+    {/* <h2 className="text-4xl  font-bold text-center mb-12">Azure Certified vs Non-Certified </h2> */}
+    <h2 className="  text-4xl  font-bold text-center mb-12"> <span className=" text-green-700">Azure Certified</span> <span className=" text-red-700">vs Non-Certified </span></h2>
+    <div className="space-y-8">
+      {data.map((item, i) => (
+        <div key={i} className="flex items-start space-x-4" data-aos="fade-down" data-aos-delay={i * 100}>
+          <div className="bg-[#2E5090] text-white p-3 rounded-full shadow-md flex items-center justify-center h-12 w-12">
+            {item.icon}
+          </div>
+          <div className="flex-1">
+            <h4 className="text-xl font-semibold text-[#2E5090] mb-1">{item.title}</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg hover:shadow-md ">
+                <h5 className="text-sm font-semibold text-green-600 mb-1">Azure Certified</h5>
+                <p className="text-gray-700 text-sm ">{item.certified}</p>
+              </div>
+              {/* <div className="bg-[#eef1f1]  p-4 rounded-lg shadow-sm"> */}
+                <div className="bg-white  p-4 rounded-lg hover:shadow-md">
+                <h5 className="text-sm font-semibold text-red-600 mb-1">Not Certified</h5>
+                <p className="text-gray-600 text-sm">{item.uncertified}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Why Get Certified Section */}
       <section id="azurepath" className="py-16 px-6 bg-[#F8FAFD]">
@@ -359,7 +693,7 @@ const data = [
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 relative">
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-12 bg-[#2E5090]/10 rounded-full blur-xl"></div>
-            <h5 className=" text-[#2E5090] font-semibold mb-2 uppercase tracking-wider">Azure Overview</h5>
+            <h5 className=" text-[#2E5090] font-semibold mb-2 uppercase tracking-wider text-xl">Azure Overview</h5>
             <h2 className="text-4xl font-bold mb-2 relative z-10">What Exactly is Microsoft Azure ?</h2>
             {/* <p className="text-gray-600 max-w-3xl mx-auto  text-lg"> */}
              <p className="text-gray-600 max-w-3xl mx-auto ">
@@ -445,7 +779,10 @@ const data = [
 {/* <div className="absolute inset-0 bg-gradient-to-b from-white to-[#E8ECF5]"></div> */}
   <div className="max-w-6xl mx-auto relative z-10">
     <div className="text-center mb-8">
-      <span className="text-[#FF5722] font-semibold mb-2 bg-yellow-300">Limited Time Offer – Take the Leap!</span>
+      {/* <span className="text-[#FF5722] font-semibold mb-2 bg-yellow-300">Limited Time Offer – Take the Leap!</span> */}
+    <span className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-200 to-yellow-300    text-[#E64A19] font-semibold ">
+  Limited Time Offer – Take the Leap!
+</span>
       <h2 className="text-4xl font-bold mb-4">Why get Started with Azure?</h2>
       <p className="text-lg mb-6 max-w-3xl mx-auto text-gray-600">
  Explore the numerous advantages of Azure and elevate your career in the cloud industry.     </p>
@@ -522,10 +859,12 @@ const data = [
       <section id="paths" className="py-20 px-6 bg-gradient-to-b from-white to-[#E8ECF5]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h5 className="text-[#FF5722] font-semibold mb-2">MICROSOFT CERTIFICATION ROADMAP</h5>
+            {/* <h5 className="text-[#FF5722] font-semibold mb-2">MICROSOFT CERTIFICATION ROADMAP</h5> */}
+          <span className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-200 to-yellow-300    text-[#E64A19] font-semibold ">
+ MICROSOFT CERTIFICATION ROADMAP
+</span>
             <h2 className="text-4xl font-bold">Top Certification Paths to Accelerate Your Career</h2>
-            {/* <div className="h-1 w-[300px] bg-[#2E5090] mx-auto rounded-full mt-2"></div> */}
-
+       
             <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
               We've curated the most in-demand Microsoft certifications designed to maximize your career growth. These industry-recognized credentials help you stand out in today’s competitive job market and open doors to new opportunities.
             </p>
@@ -782,36 +1121,7 @@ const data = [
 
 {/* <section className="py-20 px-6 bg-gradient-to-r from-[#e4eaf3] to-[#f8f8f8]"> */}
   
- <section className="py-20 px-6 bg-gradient-to-b from-white to-[#e4eaf3]">
-
-
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl  font-bold text-center mb-12">Azure Certified vs Non-Certified </h2>
-    <div className="space-y-8">
-      {data.map((item, i) => (
-        <div key={i} className="flex items-start space-x-4" data-aos="fade-down" data-aos-delay={i * 100}>
-          <div className="bg-[#2E5090] text-white p-3 rounded-full shadow-md flex items-center justify-center h-12 w-12">
-            {item.icon}
-          </div>
-          <div className="flex-1">
-            <h4 className="text-xl font-semibold text-[#2E5090] mb-1">{item.title}</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg hover:shadow-md ">
-                <h5 className="text-sm font-semibold text-green-600 mb-1">Azure Certified</h5>
-                <p className="text-gray-700 text-sm ">{item.certified}</p>
-              </div>
-              {/* <div className="bg-[#eef1f1]  p-4 rounded-lg shadow-sm"> */}
-                <div className="bg-white  p-4 rounded-lg hover:shadow-md">
-                <h5 className="text-sm font-semibold text-red-600 mb-1">Not Certified</h5>
-                <p className="text-gray-600 text-sm">{item.uncertified}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+ 
  {/* [#f7f9fc] [#eef1f1] */}
 
 
@@ -819,264 +1129,16 @@ const data = [
 
 
       {/* ROI Calculator Section */}
-      <section className="py-20 px-6 bg-white relative overflow-hidden">
-        {/* Simple decorative elements */}
-        <div className="absolute inset-0 bg-[#F8FAFD]/80"></div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-10">
-            <h5 className="text-[#FF5722] font-semibold mb-2 uppercase tracking-wider">CERTIFICATION VALUE</h5>
-            <h2 className="text-4xl font-bold mb-2">Calculate Your Potential ROI</h2>
-            {/* <div className="h-1 w-[90px] bg-[#FF5722] mx-auto rounded-full mb-4 mt-2"></div> */}
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Discover how Microsoft certification can elevate your career.
-              Explore the impact on your salary, job opportunities, and long-term growth—and see the true value of getting certified.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg max-w-4xl mx-auto mb-12 overflow-hidden border border-gray-200">
-            <div className="flex flex-col md:flex-row">
-              {/* Left column - Input */}
-              <div className="md:w-1/2 p-8 border-r border-gray-100">
-                <h4 className="text-xl font-bold mb-6 flex items-center text-[#2E5090]">
-                  <CircleDollarSign className="h-5 w-5 mr-2" />
-                  Enter Your Details
-                </h4>
-
-                <div className="space-y-6">
-                  <div>
-                    <Label htmlFor="current-salary" className="text-sm font-medium block mb-2">
-                      Current Annual Salary (in Rs)
-                    </Label>
-                    <div className="relative">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
-                      <Input
-                        id="current-salary"
-                        type="number"
-                        className="pl-8 h-11"
-                        value={salary}
-                        onChange={(e) => setSalary(parseInt(e.target.value) || 0)}
-                        min={200000}
-                        max={2000000}
-                        step={50000}
-                      />
-                    </div>
-                    <div className="mt-1 flex justify-between text-xs text-gray-500">
-                      <span>₹2 Lakhs</span>
-                      <span>₹20 Lakhs+</span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="certification-level" className="text-sm font-medium block mb-2">
-                      Microsoft Certification Target
-                    </Label>
-                    <Select
-                      value={certificationLevel}
-                      onValueChange={(value) => setCertificationLevel(value)}
-                    >
-                      <SelectTrigger id="certification-level" className="h-11">
-                        <SelectValue placeholder="Select certification level" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-white">
-                        <SelectItem value="fundamental">
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                            Fundamental (AZ-900)
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="associate">
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                            Associate (AZ-104)
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="expert">
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                            Expert (AZ-305)
-                          </div>
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <h5 className="font-medium mb-4">Average Salary Increases</h5>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <div className="h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center mr-2">
-                        <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-medium">Fundamentals: </span>
-                        <span className="text-green-600">15% increase</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center">
-                      <div className="h-6 w-6 rounded-full bg-purple-100 flex items-center justify-center mr-2">
-                        <div className="h-2 w-2 rounded-full bg-purple-500"></div>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-medium">Associate: </span>
-                        <span className="text-green-600">25% increase</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center">
-                      <div className="h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center mr-2">
-                        <div className="h-2 w-2 rounded-full bg-orange-500"></div>
-                      </div>
-                      <div className="text-sm">
-                        <span className="font-medium">Expert: </span>
-                        <span className="text-green-600">40% increase</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right column - Results */}
-              <div className="md:w-1/2 bg-[#F8FAFD] p-8">
-                <h4 className="text-xl font-bold mb-6 flex items-center text-[#2E5090]">
-                  <Sparkles className="h-5 w-5 mr-2" />
-                  Your Results
-                </h4>
-
-                <div className="bg-white rounded-lg p-5 mb-6 shadow-sm border border-gray-100">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-gray-600">Current Salary:</span>
-                    <span className="font-bold text-lg">₹{salary.toLocaleString()}</span>
-                  </div>
-
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-gray-600">Estimated Increase:</span>
-                    <div className="flex items-center">
-                      <div className="h-6 w-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
-                        <TrendingUp className="h-3 w-3 text-green-600" />
-                      </div>
-                      <span className="font-bold text-lg text-green-600">+₹{roiResult.increase.toLocaleString()}</span>
-                    </div>
-                  </div>
-
-                  <div className="h-px w-full bg-gray-100 my-4"></div>
-
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-800 font-medium">New Potential Salary:</span>
-                    <span className="font-bold text-xl text-[#2E5090]">₹{roiResult.newSalary.toLocaleString()}</span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-[#2E5090] to-[#1E3A70] text-white rounded-lg overflow-hidden shadow mb-6">
-                  <div className="p-5">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-sm opacity-90">Return on Investment</div>
-                        <div className="text-3xl font-bold">
-                          {roiResult.roi}%
-                        </div>
-                      </div>
-                      <div className="bg-white/10 p-3 rounded-full">
-                        <CircleDollarSign className="h-8 w-8" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="px-5 py-3 bg-[#1E3A70] text-sm">
-                    Based on {certificationLevel[0].toUpperCase() + certificationLevel.slice(1)} certification level
-                  </div>
-                </div>
-
-                <div className="bg-[#FF5722]/10 border border-[#FF5722]/20 rounded-lg p-4 mb-6">
-                  <div className="flex items-start">
-                    <div className="bg-[#FF5722] p-2 rounded-full text-white mr-3 mt-1">
-                      <Sliders className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-[#FF5722] mb-1">Cost-Benefit Analysis</h5>
-                      <p className="text-sm">An investment in professional certification holds the potential to elevate your annual earnings by ₹{roiResult.increase.toLocaleString()} or more.</p>
-                    </div>
-                    </div>
-                </div>
-
-                <Button
-                  className="w-full bg-[#FF5722] hover:bg-[#E64A19] text-white text-sm shadow-sm sm:text-lg"
-                  onClick={() => setPopupOpen(true)}
-                >
-                  Start Your Certification Journey
-                </Button>
-                <p className="text-xs text-center text-gray-500 mt-2">Includes Microsoft exam fee</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
 
-
-   <section id="cta" className="py-20 px-6 relative overflow-hidden">
-  <div className="absolute inset-0  bg-gradient-to-r from-[#f8f8f8] to-[#dee9f8]"></div>
-
-  <div className="max-w-6xl mx-auto relative z-10">
-    <div className="text-center mb-8">
-      <h5 className="text-[#FF5722] font-semibold mb-2">Limited Time Offer – Take the Leap!</h5>
-      <h2 className="text-4xl font-bold mb-4">Ready to Boost Your Skills?</h2>
-    </div>
-
-    <div className="bg-white rounded-xl p-8    max-w-3xl mx-auto shadow-lg border border-gray-400 ">
-   {/* <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-xl p-8 max-w-2xl mx-auto shadow-lg border border-gray-400 "> */}
-      <div className="flex flex-col md:flex-row gap-8 md:items-center">
-        <div className="flex-1">
-          <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-5 rounded-lg border border-yellow-200">
-            {/* <div className="animate-pulse-zoom flex items-center gap-2 mb-2"> */}
-            <div className="animate-pulse-zoom flex items-center justify-center gap-2 mb-2">
-              <Award className="h-5 w-5 text-yellow-600" />
-              <h4 className=" font-bold text-lg  text-yellow-700">Scholarship Opportunity</h4>
-            </div>
-            <p className="text-sm mb-2 text-gray-600">Take our online assessment test and win:</p> 
-            <div className=" flex items-center bg-yellow-50 p-2 rounded-md mb-3 border border-yellow-200">
-              <Calendar className="h-4 w-4 text-yellow-600 mr-2" />
-              <p className="text-sm font-medium text-yellow-700">Limited Time offer!</p>
-            </div>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center">
-                <div className="bg-yellow-500 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">1</div>
-                <span><span className="font-semibold">50% off</span> for top performer</span>
-              </li>
-              <li className="flex items-center">
-                <div className="bg-gray-400 text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">2</div>
-                <span><span className="font-semibold">25% off</span> for 2nd and 3rd rank</span>
-              </li>
-              <li className="flex items-center">
-                <div className="bg-[#cd7f32] text-white h-5 w-5 rounded-full flex items-center justify-center text-xs mr-2">3</div>
-                <span><span className="font-semibold">10% off</span> for 4th and 5th rank</span>
-             </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-6 flex flex-col text-center items-center">
-        <Button
-  className="bg-[#FF5722] hover:bg-[#e64a19] text-white py-2 px-4 text-sm sm:py-3 sm:px-8 sm:text-lg shadow-md w-full sm:w-auto"
-  size="lg"
-  onClick={() => setPopupOpen(true)}
->
-  Register For a Free Scholarship Exam
-</Button>
-
-        <p className="mt-3 text-sm text-gray-500">Email us at Proofpoint@sgsnassociates.com or call us at 9286379157</p>
-      </div>
-    </div>
-  </div>
-</section>
+   
 
       {/* Testimonials Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-white to-[#E8ECF5]/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h5 className="text-[#2E5090] font-semibold mb-2">SUCCESS STORIES</h5>
+            <h5 className="text-[#2E5090] font-semibold mb-2 text-xl ">SUCCESS STORIES</h5>
             <h2 className="text-4xl font-bold mb-4">Stand out to employers by proving your understanding of core cloud concepts and Azure services</h2>
           
           </div>
